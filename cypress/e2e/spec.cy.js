@@ -16,7 +16,8 @@ describe('API Testing with Cypress - Toolshop website', () => {
     // }).then((response) => {
     //   expect(response.status).to.equal(201);
     // })
-
+  })
+   it('Should login and store access token', () => {
     cy.request({
       method: 'POST',
       url: 'https://api.practicesoftwaretesting.com/users/login',
@@ -34,8 +35,7 @@ describe('API Testing with Cypress - Toolshop website', () => {
       const token = response.body.access_token;
       cy.log(token);
     });
-    
-
-  })
+   }) 
+  
   
 })
